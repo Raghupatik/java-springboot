@@ -21,13 +21,8 @@ pipeline {
                 echo 'Deploy to QA'
             }
         }
-
-        stage('Deploy to Prod') {
-            steps {
-                echo 'Deploy to Prod'
-            }
-        }
     }
+ }
     post {
       failure {
         echo 'Failed'
@@ -39,4 +34,3 @@ pipeline {
         echo 'aborted'
       }
     }
-}
