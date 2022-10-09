@@ -1,0 +1,41 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test'){
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('user acceptance testing'){
+            steps{
+                echo 'user acceptance testing'
+        
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo 'Deploying .....'
+            }
+        }
+    }
+
+post{
+    failure{
+        echo 'failure'
+    }
+    sucess{
+        echo 'sucess'
+    }
+    aborted{
+        echo 'aborted'
+    }
+}
+}
+
+    
