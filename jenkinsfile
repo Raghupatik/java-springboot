@@ -25,17 +25,6 @@ pipeline{
         }
     }
 
-post{
-    failure{
-        echo 'failure'
-    }
-    sucess{
-        echo 'sucess'
-    }
-    aborted{
-        echo 'aborted'
-    }
-}
-}
+
 
     
