@@ -31,8 +31,11 @@ pipeline {
         sucess {
             echo 'success'
         }
+        failure{
+            echo 'fail'
+        }
         always { 
-            echo 'jenkins pipeline '
+            echo 'jenkins pipeline'
         }
     }
-    
+}
