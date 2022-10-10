@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'
+            }
+        }
+        stage('push to artifractory') {
+            steps {
+                echo 'push to artifractory'
+            }
+        }
+        stage('Deploy to QA') {
+            steps {
+                echo 'Deploy to QA'
+            }
+        }
+        stage('Deploy to Prod') {
+            steps {
+                echo 'Deploy to Prod'
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'jenkins pipeline '
+        }
+    }
+}
