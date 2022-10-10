@@ -28,8 +28,11 @@ pipeline {
         }
     }
     post { 
+        sucess{
+            echo 'success'
+        }
         always { 
             echo 'jenkins pipeline '
         }
     }
-}
+    
