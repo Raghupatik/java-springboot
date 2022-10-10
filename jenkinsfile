@@ -1,0 +1,33 @@
+pipeline {
+	agent any
+	stages {
+		stage ("Build") {
+		echo "Build"
+		sh "mvn clean pacakage"
+		}
+	}
+	stage ("Test") {
+		echo "TEST"
+	}
+	stage ("Sonarqube") {
+		echo "SONARQUBE"
+	}
+	stage ("Push to artifactory") {
+		echo "PUSH TO ARTIFACTORY"
+	}
+	stage ("QA") {
+		echo "QA"
+	}
+	stage ("UAT") {
+		echo "UAT"
+	}
+	stage ("Staging") {
+		echo "STAGING"
+	}
+	stage ("Production") {
+		echo "PRODUCTION"
+	}
+}
+}
+
+		
