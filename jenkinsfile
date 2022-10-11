@@ -4,11 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
+                sh 'mvn clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Test'
+                
             }
         }
         stage('push to artifractory') {
@@ -21,7 +23,6 @@ pipeline {
                 echo 'Deploy to QA'
             }
         }
-        stage('Deploy to Prod') {
             steps {
                 echo 'Deploy to Prod'
             }
