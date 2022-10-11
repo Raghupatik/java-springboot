@@ -11,11 +11,12 @@ pipeline {
             steps {
                 echo 'Test'
                 
+                
             }
         }
         stage('push to artifractory') {
             steps {
-                
+
                 echo 'push to artifractory'
             }
         }
