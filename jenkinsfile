@@ -1,0 +1,33 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('package') {
+            steps {
+                echo 'package..'
+                sh 'mvn clean package -dmaven.test.skip=true'
+            }
+        }
+        stage('Test'){
+            steps {
+                echo 'Testing..'
+                sh 'mvn test'
+            }
+        }
+        stage('install'){
+            steps{
+                echo 'install'
+        
+            }
+        }
+        stage('deploy'){
+            steps{
+                echo 'deploy .....'
+            }
+        }
+    }
+}
+
+
+
+    
