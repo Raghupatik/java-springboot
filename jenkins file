@@ -40,8 +40,6 @@ pipeline{
         sucess{
             echo " build sucess"
         }
-        always{
-            echo "say hello"
-        }
+        
     }
 }
