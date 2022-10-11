@@ -24,7 +24,7 @@ pipeline {
             }
         }
     }
-    }
+    
     post { 
         success {
             echo 'success'
@@ -36,3 +36,4 @@ pipeline {
             echo 'jenkins pipeline'
         }
     }
+}
