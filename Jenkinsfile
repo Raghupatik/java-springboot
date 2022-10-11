@@ -3,19 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build'
-                sh 'mvn clean package'             
+                echo 'Building'             
             }
         }
         stage('Test') {
             steps {
-                echo 'Test'
-                sh 'mvn test'
-            }
-        }
-        stage('Push to artifactory') {
-            steps {
-                echo 'Push to artifactory'
+                echo 'Testing'
             }
         }
         stage('Deploy to QA') {
