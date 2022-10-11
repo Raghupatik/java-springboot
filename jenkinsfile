@@ -15,6 +15,7 @@ pipeline {
         }
         stage('push to artifractory') {
             steps {
+                
                 echo 'push to artifractory'
             }
         }
