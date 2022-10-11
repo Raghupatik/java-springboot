@@ -39,4 +39,3 @@ pipeline {
             echo 'jenkins pipeline'
         }
     }
-}
