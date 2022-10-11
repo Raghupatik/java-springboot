@@ -2,10 +2,10 @@ pipeline{
     agent any
 
     stages{
-        stage('Build') {
+        stage('package') {
             steps {
-                echo 'Building..'
-                sh 'mvn clean package'
+                echo 'package..'
+                sh 'mvn clean package -dmaven.test.skip=true'
             }
         }
         stage('Test'){
@@ -14,15 +14,15 @@ pipeline{
                 sh 'mvn test'
             }
         }
-        stage('user acceptance testing'){
+        stage('install'){
             steps{
-                echo 'user acceptance testing'
+                echo 'install'
         
             }
         }
-        stage('Deploy'){
+        stage('deploy'){
             steps{
-                echo 'Deploying .....'
+                echo 'deploy .....'
             }
         }
     }
