@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build'
+                sh 'mvn clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'    
+            }
+        }
+        stage('push to artifractory') {
+            steps {
+
+                echo 'push to artifractory'
+            }
+        }
+        stage('Deploy to QA') {
+            steps {
+                echo 'Deploy to QA'
+            }
+        }
+    
+        stage('sonar Quality') {
+            steps {
+                echo 'sonar Qube'
+            }
+        }
+    }
+    post { 
+        success {
+            echo 'success'
+        }
+        failure{
+            echo 'fail'
+        }
+        always { 
+            echo 'jenkins pipeline'
+        }
+    }
+}
