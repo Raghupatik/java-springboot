@@ -5,6 +5,10 @@ pipeline {
             steps {
                 echo 'Hello World'
             }
+
+            steps {
+                New statement
+            }
         }
     }
     post { 
