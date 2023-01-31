@@ -16,11 +16,7 @@ pipeline {
                 sh "mvn Test"
             }
         }
-        stage('Sonar-qube') {
-            steps {
-                echo 'Sonar-qube'      
-            }
-        }  
+        
         stage('Deploy Dev') {
             steps {
                 echo 'Deploy Dev'
