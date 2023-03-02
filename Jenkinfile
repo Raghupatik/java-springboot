@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+          stage('Build') {
+            steps {
+                echo 'Build'
+                sh "mvn package"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'
+                sh "mvn Test"
+            }
+        }
+        stage('Sonar-qube') {
+            steps {
+                echo 'Sonar-qube'      
+            }
+        }
+        stage('Deploy Dev') {
+            steps {
+                echo 'Deploy Dev'
+            }
+        stage('Deploy test') {
+            steps {
+                echo 'Deploy test'
+            }
+        }
+        stage('Deploy Prod') {
+            steps {
+                echo 'Deploy Prod'
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
