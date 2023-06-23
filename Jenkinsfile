@@ -47,6 +47,9 @@ pipeline {
         success {
             echo 'Success'
         }
+        aborted {
+            echo 'aborted'
+        }
        
     }
 }
