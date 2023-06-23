@@ -47,8 +47,6 @@ pipeline {
         success {
             echo 'Success'
         }
-        always {
-            echo 'always'
-        }
+       
     }
 }
